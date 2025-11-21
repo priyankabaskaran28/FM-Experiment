@@ -111,8 +111,10 @@ Tabulation:
 
 
 RESULT:
-
-Thus, the frequency modulation and demodulation is successfully done and the output is experimentally verified.
-
+The experiment successfully implemented Frequency Modulation (FM) and Demodulation using Python.
+The message signal, FM-modulated signal, and demodulated signal were generated and plotted using NumPy and Matplotlib.
+The FM waveform showed frequency variations proportional to the amplitude of the message signal, confirming correct modulation.
+The demodulated output closely matched the original message signal, proving that the FM demodulation technique using phase-unwrapping and differentiation worked accurately.
+Thus, FM modulation and demodulation were analyzed and verified using Python, achieving the expected theoretical behavior.
 
 
