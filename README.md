@@ -1,4 +1,5 @@
 # FM
+# Priyanka B (212224060197)
 
 EXP NO: 4	GENERATION AND DETECTION OF FM
 
@@ -65,30 +66,53 @@ MODEL GRAPH:
 
 
 Program
+~~~
+                                                       // GENERATION AND DETECTION OF FM
+// Parameters
+am = 11.3;        // Message amplitude
+Fm = 520;         // Message frequency (Hz)
+B  = 6.3;         // Modulation index
+Ac = 22.6;          // Carrier amplitude
+Fc = 5200;        // Carrier frequency (Hz)
+Fs = 91700;       // Sampling frequency
+T  = 0:1/Fs:2/Fm; // Time vector (two cycles of message)
+
+// Message signal
+em = am * cos(2*%pi*Fm*T);
+subplot(3,1,1);
+plot(T, em);
+xtitle("Message Signal");
+xgrid();
+
+// Carrier signal
+ec = Ac * cos(2*%pi*Fc*T);
+subplot(3,1,2);
+plot(T, ec);
+xtitle("Carrier Signal");
+xgrid();
+// FM signal
+efm = Ac * cos( (2*%pi*Fc*T) + (B * sin(2*%pi*Fm*T)) );
+subplot(3,1,3);
+plot(T, efm);
+xtitle("FM Signal");
+xgrid();
+
+~~~
+
+Output Waveform:
+<img width="1600" height="938" alt="image" src="https://github.com/user-attachments/assets/4b6d3d90-99dc-420f-955c-3932034e3af9" />
 
 
-Output Waveform
 
+Tabulation:
 
-
-Tabulation
-
-
-
-Calculation
-
-
-
-Frequency Deviation Practical = 
-
-Modulation Index Practical	= 
-
-Modulation Index Theoretical	=
+<img width="816" height="1280" alt="image" src="https://github.com/user-attachments/assets/6e9658e5-835a-4696-be3e-c44847dfd1d1" />
 
 
 
 RESULT:
 
 Thus, the frequency modulation and demodulation is successfully done and the output is experimentally verified.
+
 
 
